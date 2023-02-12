@@ -84,3 +84,4 @@ production:
   database: evaluat3d_production
   username: evaluat3d
   password: <%= ENV['EVALUAT3D_DATABASE_PASSWORD'] %>
+  host: localhost
