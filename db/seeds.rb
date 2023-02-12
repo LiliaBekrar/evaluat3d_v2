@@ -15,7 +15,7 @@ RoomType.destroy_all
 Move.destroy_all
 User.destroy_all
 
-user = User.create!(email: "lilia@evaluated.com", first_name: "Lilia", last_name: "Bekrar", telephone: "0678901234", password: "123456")
+user = User.create!(email: "jonathan@evaluated.com", first_name: "jonathan", last_name: "jonathan", telephone: "0678901234", password: "123456")
 p "#{user.email} created"
 
 # pour les moves le champ transport sera déterminé en fonction du volume... l user ne peut pas le saisir
