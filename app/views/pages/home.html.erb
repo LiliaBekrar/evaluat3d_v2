@@ -7,9 +7,9 @@
 
   <div class="container d-flex justify-content-center">
     <% if Move.where(user_id: current_user).count > 0 %>
-      <%= link_to "JE DÉMÉNAGE !", moves_path, class: "btn btn-home" %>
+      <%= link_to "JE DÉMÉNAGE TOUT !", moves_path, class: "btn btn-home" %>
     <% else %>
-      <%= link_to "JE DÉMÉNAGE !", new_move_path, class: "btn btn-home" %>
+      <%= link_to "JE DÉMÉNAGE TOUT !", new_move_path, class: "btn btn-home" %>
     <% end %>
   </div>
 
