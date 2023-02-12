@@ -35,5 +35,5 @@ document.addEventListener('turbolinks:load', () => {
   initAutocomplete();
   initMapbox();
   initPlusMinusButtons();
-//  initToggles();
+  initToggles();
 });
