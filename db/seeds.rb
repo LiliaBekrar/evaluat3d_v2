@@ -39,10 +39,9 @@ user = User.create!(email: "georgia@evaluated.com", first_name: "Georgia", last_
 p "#{user.email} created"
 
 
-csv_options = { col_sep: ';', quote_char: '"', headers: :first_row }
 filepath    = Rails.root.join("db/volumetrie.csv")
 
-CSV.foreach(filepath, csv_options) do |row|
+CSV.foreach(filepath, col_sep: ';', quote_char: '"', headers: :first_row) do |row|
 
   RoomType.create!(name: row['ROOM_TYPE'].rstrip) if RoomType.find_by(name: row['ROOM_TYPE'].rstrip).nil?
 
