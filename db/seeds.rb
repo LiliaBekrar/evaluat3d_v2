@@ -15,7 +15,7 @@ RoomType.destroy_all
 Move.destroy_all
 User.destroy_all
 
-user = User.create!(email: "lilia@evaluated.com", first_name: "Lilia", last_name: "Bekrar", telephone: "0678901234", password: "123456")
+user = User.create!(email: "jonathan@evaluated.com", first_name: "Jonathan", last_name: "Theone", telephone: "0678901234", password: "123456")
 p "#{user.email} created"
 
 # pour les moves le champ transport sera déterminé en fonction du volume... l user ne peut pas le saisir
@@ -39,10 +39,9 @@ user = User.create!(email: "georgia@evaluated.com", first_name: "Georgia", last_
 p "#{user.email} created"
 
 
-csv_options = { col_sep: ';', quote_char: '"', headers: :first_row }
 filepath    = Rails.root.join("db/volumetrie.csv")
 
-CSV.foreach(filepath, csv_options) do |row|
+CSV.foreach(filepath, col_sep: ';', quote_char: '"', headers: :first_row) do |row|
 
   RoomType.create!(name: row['ROOM_TYPE'].rstrip) if RoomType.find_by(name: row['ROOM_TYPE'].rstrip).nil?
 
